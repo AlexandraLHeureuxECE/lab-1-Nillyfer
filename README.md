@@ -1,1 +1,12 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/BCrizr4d)
+# Tic-Tac-Toe Game
+A simple two-player Tic-Tac-Toe game built with React.  
+Players take turns on the same device, and the game detects wins, ties, and allows restarting without refreshing the page.
+
+## Run locally
+1. Install dependencies:
+   npm install
+2. Start the development server:
+   npm run dev
+
+## LLM tools used
+- ChatGPT 5.2 was used to generate the application code, UI changes, and game logic.

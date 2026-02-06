@@ -1,0 +1,129 @@
+:root {
+  --bg-main: #fff0f6;
+  --bg-card: #ffffff;
+  --bg-board: #ffe4ef;
+
+  --pink-strong: #ec4899;
+  --pink-soft: #f9a8d4;
+  --pink-hover: #fbcfe8;
+
+  --text-main: #4a044e;
+  --text-muted: #9d174d;
+
+  --win-green: #34d399;
+  --shadow: rgba(236, 72, 153, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(135deg, #ffe4ef, #fdf2f8);
+  color: var(--text-main);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2.4rem;
+  color: var(--pink-strong);
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.main,
+.page > div {
+  background: var(--bg-card);
+  padding: 28px 32px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  gap: 14px;
+  justify-content: center;
+  padding: 16px;
+  background: var(--bg-board);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--pink-strong);
+  cursor: pointer;
+
+  /* CENTER CONTENT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 16px rgba(236, 72, 153, 0.2);
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+
+.cell:hover:not(:disabled) {
+  background: var(--pink-hover);
+  transform: translateY(-3px);
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.cell.win {
+  background: var(--win-green);
+  color: white;
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.35);
+}
+
+.preview {
+  opacity: 0.35;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--pink-strong);
+  color: white;
+  box-shadow: 0 6px 14px rgba(236, 72, 153, 0.35);
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.controls button:hover {
+  background: #db2777;
+  transform: translateY(-2px);
+}
